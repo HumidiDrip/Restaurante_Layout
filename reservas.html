@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Layout Restaurante</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+  <style>
+    .parallax{
+      background-image: url('http://lambert.kwst.net/site/images/bg/33.jpg')
+    }
+  </style>
+</head>
+
+
+
+<body>
+	<div class="bg parallax">
+		<div class="overlay">
+			<div class="container menu-sup">
+				<div class="social">
+					<a href="http://facebook.com"><i class="fab fa-facebook-f"></i></a>
+              &nbsp;
+              <a href="http://instragram.com"><i class="fab fa-instagram"></i></a>
+              &nbsp;
+              <a href="http://pinterest.com"><i class="fab fa-pinterest"></i></a>
+            </div>
+
+            <header>
+                <div class="logo">
+                  <img src="http://lambert.kwst.net/site/images/logo.png">
+                </div>
+                <nav class="menu">
+                    <a href="index.html" >Home</a>
+                    <a href="cardapio.html">Cardápio</a>
+                    <a href="galeria.html">Galeria</a>
+                    <a href="reservas.html"class="active">Reservas</a>
+                    <a href="loja.html">Loja</a>
+                    <a href="contato.html">Contato</a>
+                    <a href="blog.html">Blog</a>
+                </nav>
+            </header>
+        </div>
+        <div class="container titulo-bg">
+          <div class="filho">
+            <h2>CATEGORIA</h2>
+            <h3>Pellentesque habitant morbi</h3>
+          </div>
+        </div>
+    </div>
+  </div>
+   <div class="triangle-decor">
+      <svg x="0px" y="0px" width="100%" height="15px"><defs><pattern id="bottom-divider" x="0" y="0" width="15" height="15" patternUnits="userSpaceOnUse"><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M7.504-0.008l7.504,7.504L7.504,15L0,7.496L7.504-0.008z"></path></pattern></defs><rect x="0" y="0" width="100%" height="15" fill="url(#bottom-divider)"></rect></svg>
+    </div>
+
+    <!-- PEDIDO -->
+    <div class="container">
+      <h1>Reserva</h1>
+      <form action="" method="" id="form-pedidos" >
+        <div>
+          <label for="txtnome">Nome</label>
+          <input type="text" name="txtnome" placeholder="Digite seu Nome">
+        </div>
+        
+        <div>
+          <label for="txtcelular">Celular</label>
+          <input type="text" name="txtcelular" placeholder="(19) 999999999">
+        </div>
+
+        <div>
+          <label for="txtpedido">Pedido</label>
+          <textarea name="txtpedido" id="txtpedido" cols="30" rows="5"></textarea>
+        </div>
+
+        <div>
+          <button onclick="PegaPedido()">
+            <!-- <a href="https://api.whatsapp.com/send?phone=5519994425383&text=Oi%20eu%20sou%20%3Cnome_cliente%3E%0AMeu%20Telefone%20%C3%A9%20%3Ctelefone_cliente%3E%0AMeu%20Pedido%0A%0A">-->ENVIAR PEDIDO (WHATSAPP)</a> </button>
+          
+        </div>
+      </form>
+    </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"></script>
+  <script src="js/script.js"></script>
+
+  <script>
+    function PegaPedido(){
+      let nome = $('#txtnome').val();
+      let celular = 5519995254616;
+      let pedido = $('#txtpedido').val();
+      let cabecalho = '*Oi eu sou* ' + nome + '\n*Meu pedido é*: ' + pedido;
+      let mensagem = encodeURIComponent(cabecalho);
+      let url = `https://api.whatsapp.com/send?phone=${celular}&text=${mensagem}`;
+      window.open(url, 'blank')
+      // alert('Nome do Cliente:' + nome + '\nCelular: ' + celular + '\nPedido: ' + url);
+    }
+  </script>
+
+  </body>
+</html>

@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Vidaloka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playball&family=Source+Sans+Pro:wght@900&display=swap');
+
+* { box-sizing: border-box; margin: 0;   padding: 0; }
+
+p{ margin: 12px 0; font-family: Candara; font-size: 1em; }
+
+h1, h2 {padding: 16px 0; font-family: Piedra}
+
+ul{padding-left: 40px; padding-bottom: 24px}
+
+.container{max-width: 1280px; margin: 0 auto; padding: 10px }
+
+.parallax{
+  background-image: url('http://lambert.kwst.net/site/images/bg/14.jpg');
+  height: 550px;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+}
+
+.overlay{
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 550px;
+  width:100%;
+}
+
+
+
+/* Menu de Midias Sociais */
+.social{
+  /* background-color: black; */
+  text-align: right;
+  padding-top:20px;
+}
+
+.fa-facebook-f, .fa-instagram, .fa-pinterest{
+  color: white;
+}
+
+.logo{
+  /* background-color: black; */
+}
+
+/* Header */
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: black; */
+}
+
+/* Menu */
+.menu a{
+  font-family: Vidaloka;
+  color: white;
+  text-decoration: none;
+  padding-left: 22px
+}
+
+.menu a:hover{
+  color: #C59D5F;
+}
+
+.menu .active{
+  color: #C59D5F;
+}
+
+.menu a.active::before { 
+  content: "• "; 
+  color: white; 
+} 
+.menu a.active::after{ 
+  content: " •"; 
+  color: white; 
+} 
+
+::selection {
+  background: pink ;
+}
+
+
+.triangle-decor{
+  top: -7px;
+  position: relative;
+}
+
+
+.titulo-bg{
+  /* background-color:aquamarine; */
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 75%;
+  text-align: center;
+ }
+
+.titulo-bg h2{
+  color: white;
+  font-family: "Source Sans Pro";
+  font-size:44px;
+  letter-spacing: 3px;
+  /* padding-bottom: 20px; */
+}
+
+.titulo-bg h3{
+  color: #C59D5F;
+  font-family: Playball;
+  font-size:33px;
+  font-weight:200;
+}
+
+.galeria
+{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)) ;
+  gap:10px;
+}
+
+.img-item img{
+  max-width: 100%;
+  display: block;
+  font-size: 0;
+}
+
+.img-item:hover{
+transition: transform 0.5s ease;
+-moz-transform: scale(1.1);
+-webkit-transform: scale(1.1);
+transform: scale(1.1);
+}
+
+
+
+/* espaço entre os elementos */
+#form-pedidos div + div {
+    margin-top: 1em;
+}
+
+#form-pedidos label {
+    /*Para ter certeza que todas as labels tem o mesmo tamanho e estão propriamente alinhadas */
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+}
+
+#form-pedidos input, #form-pedidos textarea {
+    /* Para certificar-se que todos os campos de texto têm as mesmas configurações de fonte. Por padrão, textareas ter uma fonte monospace*/
+    font: 1em sans-serif;
+    /* Para dar o mesmo tamanho a todos os campo de texto */
+    width: 80%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    /* Para harmonizar o look & feel das bordas nos campos de texto*/
+    border: 1px solid #999;
+    padding: 2px;
+    border-radius: 3px;
+}
+
+#form-pedidos input:focus, #form-pedidos textarea:focus {
+    /* Dar um pouco de destaque nos elementos ativos */
+    border-color: rgb(17, 0, 255);
+    outline: none;
+}
+
+#form-pedidos textarea {
+    /* Para alinhar corretamente os campos de texto de várias linhas com sua label*/
+    vertical-align: top;
+
+    /* Para dar espaço suficiente para digitar algum texto */
+    height: 5em;
+}
+
+#form-pedidos button{
+  padding: 12px 32px;
+  background-color: #65d38f;
+  color: #37704d;
+  border: none;
+  float:right;
+}
+
+#form-pedidos button:active{
+  background-color: #6fc993;
+}
+
+#form-pedidos button:hover{
+background-color:antiquewhite;
+}
